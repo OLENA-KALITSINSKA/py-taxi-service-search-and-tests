@@ -33,25 +33,25 @@ class FormTest(TestCase):
 
 class SearchFormsTest(TestCase):
     def test_driver_search_form_valid(self):
-        form = DriverSearchForm(data={'username': 'testuser'})
+        form = DriverSearchForm(data={"username": "testuser"})
         self.assertTrue(form.is_valid())
 
     def test_driver_search_form_empty(self):
-        form = DriverSearchForm(data={'username': ''})
+        form = DriverSearchForm(data={"username": ""})
         self.assertTrue(form.is_valid())
 
     def test_car_search_form_valid(self):
-        form = CarSearchForm(data={'model': 'Corolla'})
+        form = CarSearchForm(data={"model": "Corolla"})
         self.assertTrue(form.is_valid())
 
     def test_car_search_form_empty(self):
-        form = CarSearchForm(data={'model': ''})
+        form = CarSearchForm(data={"model": ""})
         self.assertTrue(form.is_valid())
 
     def test_manufacturer_search_form_valid(self):
-        form = ManufacturerSearchForm(data={'name': 'Toyota'})
+        form = ManufacturerSearchForm(data={"name": "Toyota"})
         self.assertTrue(form.is_valid())
 
     def test_manufacturer_search_form_empty(self):
-        form = ManufacturerSearchForm(data={'name': ''})
+        form = ManufacturerSearchForm(data={"name": ""})
         self.assertTrue(form.is_valid())
