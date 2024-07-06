@@ -6,7 +6,10 @@ from taxi.models import Manufacturer, Car
 
 class ModelTests(TestCase):
     def test_manufacturer_str(self):
-        manufacturer = Manufacturer.objects.create(name="test", country="test_country")
+        manufacturer = Manufacturer.objects.create(
+            name="test",
+            country="test_country"
+        )
         self.assertEquals(
             str(manufacturer),
             f"{manufacturer.name} {manufacturer.country}"
